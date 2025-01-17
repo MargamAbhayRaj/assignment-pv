@@ -68,10 +68,11 @@ body {
 
 .main-content {
   flex: 1;
-  padding: var(--spacing-xl);
-  max-width: 1280px;
-  margin: 0 auto;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-xl) var(--spacing-md);
 }
 
 /* Button Styles */
@@ -114,10 +115,14 @@ body {
 
 /* Form Styles */
 .form-container {
-  background-color: white;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
   padding: var(--spacing-xl);
+  background-color: white;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
+  text-align: center;
 }
 
 .form-group {
@@ -151,8 +156,10 @@ body {
 
 /* Grid System */
 .grid {
-  display: grid;
-  gap: var(--spacing-lg);
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  place-items: center;
 }
 
 @media (min-width: 640px) {
@@ -203,3 +210,45 @@ body {
 .rounded { border-radius: var(--radius-md); }
 .rounded-lg { border-radius: var(--radius-lg); }
 .rounded-full { border-radius: var(--radius-full); }
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-center {
+  display: grid;
+  place-items: center;
+}
+
+/* Add these text alignment utilities */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* Add margin utilities */
+.mx-auto { margin-left: auto; margin-right: auto; }
+.my-auto { margin-top: auto; margin-bottom: auto; }
+
+/* Add width utilities */
+.w-full { width: 100%; }
+.max-w-sm { max-width: 24rem; }
+.max-w-md { max-width: 28rem; }
+.max-w-lg { max-width: 32rem; }
+.max-w-xl { max-width: 36rem; }
+.max-w-2xl { max-width: 42rem; }
